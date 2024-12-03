@@ -1,0 +1,2216 @@
+import java.util.*;
+class Amazon_Online_Bookstore
+{
+    int x=0;
+    static double finalcost=0;
+    static int total=0;
+    static int payment=0;
+    static String name1="";
+    static int cost=0;
+    static int num=0;
+    static long pno=0;
+    static String add="";
+    double s=0;
+    static int n=100;
+    static int z=10;
+    static String name[]=new String[n];
+    double price[]=new double[n];
+    Scanner sc=new Scanner(System.in);
+    double billamt=0;
+    static String str="";
+    static String namebook="";
+    public static void main()
+    {
+                      System.out.println("*******************************************************");
+System.out.println("                     AMAZON ONLINE BOOKSTORE                           ");      
+System.out.println("*******************************************************"); 
+System.out.println("☻WELCOME TO AMAZON BOOKS-ONLINE SHOPPING  ☻");                            
+ System.out.println("*****WORLD'S LARGEST ONLINE BOOK STORE***** ");
+System.out.println("☺ IF YOU ARE IN THE MOOD OF SHOPPING SOME BEST                   SELLERS AMONG BOOKS.... ☺");
+System.out.println("☺THEN YOU ARE DEFINETELY IN THE RIGHT PLACE☺");
+try
+           {
+            Scanner sc=new Scanner(System.in);
+            String st;
+            while(true)
+            {
+              
+             Amazon_Online_Bookstore obj=new Amazon_Online_Bookstore();
+             do
+             { 
+                    System.out.println("*******************************************************");
+System.out.println("Kindly enter your name");
+                    name1=sc.nextLine();
+System.out.println("Kindly enter your phone number(exactly 10 digit number)");
+                    pno=sc.nextLong();
+System.out.println("Kindly enter your address");
+                    add=sc.next();
+                  
+
+
+
+System.out.println("*******************************************************");
+System.out.println("                                       OFFER LIST                                              ");
+                   System.out.println("*******************************************************");
+                    System.out.println("Shop For The Following Prices And Win Exciting Gifts ");
+                    System.out.println(" ");
+                    System.out.println(" ");
+                    System.out.println(" Above Rs.1000               -Tennis Ball worth Rs.100");
+                    
+  for (double i =0;i<=1000000000;i++);
+                    System.out.println(" Above Rs.2000               -Foot Ball worth Rs.500");
+                    
+ for (double i =0;i<=1000000000;i++);
+                    System.out.println(" Above Rs.3000               -Basket Ball worth Rs.1000");
+                   
+ for (double i =0;i<=1000000000;i++);
+                    System.out.println(" Above Rs.4000               -Reebok Cricket Kit worth Rs.1500");
+                    
+ for (double i =0;i<=1000000000;i++);
+                    System.out.println(" Above Rs.5000               -Apple Gift Voucher worth Rs.2500");
+                    
+ for (double i =0;i<=1000000000;i++);
+                    System.out.println("********************************************************");
+                    System.out.println("We allow our customers to shop conveniently and provide them with a wide variety of choices to choose from.");
+                    System.out.println("Please select any topic from the following list");
+                    System.out.println("The choices are:");
+                    System.out.println("1.Story books");
+                    System.out.println("2.Transgressive_Fiction");
+                    System.out.println("3.Biogaphies_and_Autobiographies");
+                    System.out.println("4.Novels");
+                    System.out.println("5.Sci_Fi");
+                    System.out.println("6.Encyclopedias");
+                    System.out.println("7.Dictionaries");
+                    for (double i =0;i<=1000000000;i++);
+                    System.out.println("Enter your choice ☺");
+                    int c=sc.nextInt();
+                    switch(c)
+                    {
+                        case 1:obj.Story_books();
+                        break;
+                        case 2:obj.Transgressive_Fiction();
+                        break;
+                        case 3:obj.Biogaphies_and_Autobiographies();
+                        break;
+                        case 4:obj.Novels();
+                        break;
+                        case 5:obj.Sci_Fi();
+                        break;
+                        case 6:obj.Encyclopedias();
+                        break;
+                        case 7:obj.Dictionaries();
+                        break;
+                        default:
+                        System.out.println("Please check your input");
+                        System.out.println("Please type 'stop' if you want to stop");
+                        System.out.println("Type anything else if you want to continue shopping");
+                        st=sc.next();
+
+                    }
+                }
+                while(str.equalsIgnoreCase("Stop"));
+                {
+                    System.out.println("Please re enter the name of book you would like to buy");
+                    namebook=sc.next();
+                    System.out.println("enter the number of units you would like to buy");
+                    num=sc.nextInt();
+                    System.out.println("***********************************************************");
+                    System.out.println("Choose:");
+                    System.out.println("1. for online payment");
+                    System.out.println("2. for payment at doorstep");
+                    System.out.println("***********************************************************");                  
+                    total=cost*num;
+                    finalcost=(cost*num)+((cost*num)*0.18)+50;
+                    System.out.println();
+                    payment=sc.nextInt();
+                    if(finalcost>1000&&finalcost<2000)
+                    {
+                        System.out.println("Dear Customer You Have Shopped Above Rs.1000");
+                        System.out.println("So You Have A Tennis Ball Worth Rs.100 As A Price"); 
+                        System.out.println("Collect Your Price At Delivery");
+                    }
+                    else if(finalcost>2000&&finalcost<3000)
+                    {
+                        System.out.println("Dear Customer You Have Shopped Above Rs.2000");
+                        System.out.println("So You Have A Football Worth Rs.500 As A Price"); 
+                        System.out.println("Collect Your Price At Delivery");
+                    }
+                    else if(finalcost>3000&&finalcost<4000)
+                    {
+                        System.out.println("Dear Customer You Have Shopped Above Rs.3000");
+                        System.out.println("So You Have A Basketball Worth Rs.1000 As A Price"); 
+                        System.out.println("Collect Your Price At Delivery");
+                    }
+                    else if(finalcost>4000&&finalcost<5000)
+                    {
+                        System.out.println("Dear Customer You Have Shopped Above Rs.4000");
+                        System.out.println("So You Have A Reebok Cricket Kit Worth Rs.1500 As A                                                       Price"); 
+                        System.out.println("Collect Your Price At Delivery");
+                    }
+                    else if(finalcost>5000)
+                    {
+                        System.out.println("Dear Customer You Have Shopped Above Rs.5000");
+                        System.out.println("So You Have An Apple Gift Voucher Worth Rs.2500 As A Price"); 
+                        System.out.println("Collect Your Price At Delivery");
+                    }
+                    if(payment==1)
+                    {
+                        System.out.println("Enter Your Bank Account Number");
+                        int paymentb=sc.nextInt();
+                         for (double i =0;i<=1000000000;i++);
+                        System.out.println("Enter Your Password (YOUR PASSWORD WILL REMAIN PRIVATE!!!)");
+                        int paymentb3=sc.nextInt();
+                         for (double i =0;i<=1000000000;i++); 
+                        System.out.println("Please Save Your Bill");
+                        System.out.println();
+                        System.out.println();
+                        System.out.println("***********************************************************
+                        System.out.println("                        AMAZON BOOKS                       ");
+                        System.out.println("***********************************************************");
+                        System.out.println("www.amazonbooks.com                                amazon.pvt.ltd");
+                        System.out.println("Customer name          "+"                                  "+name1);
+                        System.out.println("Phone number           "+"                                  "+pno);
+                        System.out.println("Address                "+"                                  "+add);
+                        System.out.println("Mode of payment        "+"                                  "+"online");
+                        System.out.println("Delivery charges       "+"                                  "+"Rs.50");
+                        System.out.println("GST percentage         "+"                                  "+"18% rise in cost");
+                        System.out.println("Book name              "+"                                  "+namebook);
+                        System.out.println("Number of books        "+"                                  "+num);
+                        System.out.println("Book cost              "+"                                  "+cost);
+                        System.out.println("Total cost without GST "+"                                  "+total);
+                        System.out.println("Total cost with GST    "+"                                  "+finalcost);
+                        System.out.println();
+                        System.out.println("                            THANK YOU!                              ");
+                        System.out.println("                          ENJOY READING!                            ");
+                        System.out.println("                        HOPE YOU VISIT AGAIN!                         ");
+                        System.out.println("                       ☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺                         ");
+                        System.out.println("***********************************************************");
+                    }
+                    else if(payment==2)
+                    {
+                        System.out.println("Please Collect Your Bill");
+                        System.out.println();
+                        System.out.println();
+                        System.out.println("***********************************************************");
+                        System.out.println("                        AMAZON BOOKS                       ");
+                        System.out.println("***********************************************************");
+                        System.out.println("www.amazonbooks.com                                amazon.pvt.ltd");
+                        System.out.println("Customer name          "+"                                  "+name1);
+                        System.out.println("Phone number           "+"                                  "+pno);
+                        System.out.println("Address                "+"                                  "+add);
+                        System.out.println("Mode of payment        "+"                                  "+"doorstep");
+                        System.out.println("Delivery charges       "+"                                  "+"Rs.50");
+                        System.out.println("GST percentage         "+"                                  "+"18% rise in cost");
+                        System.out.println("Book name              "+"                                  "+namebook);
+                        System.out.println("Number of books        "+"                                  "+num);
+                        System.out.println("Book cost              "+"                                  "+cost);
+                        System.out.println("Total cost without GST "+"                                  "+total);
+                        System.out.println("Total cost with GST    "+"                                  "+finalcost);
+                        System.out.println();
+                        System.out.println("                            THANK YOU!                              ");
+                        System.out.println("                          ENJOY READING!                            ");
+                        System.out.println("                        HOPE YOU VISIT AGAIN!                         ");
+                        System.out.println("                       ☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺                         ");
+                        System.out.println("***********************************************************");
+                    }
+
+                System.out.println("Are there any more customers");
+                 for (double i =0;i<=1000000000;i++);
+                System.out.println("Enter no if there are no more customers");
+                 for (double i =0;i<=1000000000;i++);
+                String str=sc.next();
+                if(str.equalsIgnoreCase("No"))
+                    break;
+                }
+            }
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+            System.out.println("Please give a valid input");
+        }
+
+    }
+
+    public void Story_books()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Welcome to the world of stories");
+        System.out.println("Shop for books with amazing discounts during the Great Indian Sale");
+        System.out.println("The Books Available Here Are:");
+        System.out.println("1. Fiction");
+        System.out.println("2. Non Fiction");
+        System.out.println("3. Adventure");
+        System.out.println("4. Satire");
+        System.out.println("5. Horror");
+        System.out.println("6. Mystery");
+        System.out.println("7. Fantasy");
+         for (double i =0;i<=1000000000;i++);
+        System.out.println("Enter your choice");
+        int chwo=sc.nextInt();
+        switch(chwo)
+        {
+            case 1:
+            System.out.println("This is fiction books section");
+            System.out.println("The latest collections of books have just come in");
+            System.out.println("Fiction books section provides you with its own varieties");
+            System.out.println("                                                         ");
+            System.out.println("The Books Available Here Are:");
+            System.out.println("***********************************************************");
+            System.out.println("                               ☺ FICTION BOOKS ☺                             ");
+            System.out.println("***********************************************************");
+            System.out.println(" SERIAL NO.          BOOK NAME                             AUTHOR            ");
+            System.out.println("    1.         Nineteen eighty four(1984)             George Washington      ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    2.         The Handmaid's Tale                    Margaret Atwood        ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    3.         To Kill A Mocking Bird                 Harpee Lee             ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    4.         Jane Eyre                              Charlotte Bronte       "); 
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    5.         The Outsider                           Stephen King           ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    6.         The Lord Of The Rings                  Jr R. Tolkein          ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    7.         The Cather In The Rye                  J.D Salinger           ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    8.         War And Peace                          Leo Tolstoy            ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    9.         Lord Of The Flies                      William Goldling       ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    10.        Great Expectations                     Charles Dickens        ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    11.        Chronicles Of Narnia                   C.S Rewis              ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    12.        The Retribution                        Val McDermid              ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("***********************************************************
+            System.out.println("Enter serial number of the book you want to buy");
+            int num=sc.nextInt();
+            if(num==1)
+            {
+                name[z]="Nineteen eighty four(1984)";
+                price[z]=350;
+                z++;
+                System.out.println("The cost of your choice is Rs.350.0 ");
+                cost=350;
+            }
+            else if(num==2)
+            {
+                name[z]="The Handmaid's Tale";
+                price[z]=250.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.250.0  ");
+                cost=250;
+            }
+            else if(num==3)
+            {
+                name[z]="To Kill A Mocking Bird";
+                price[z]=300.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.300.0  ");
+                cost=300;
+            }
+            else if(num==4)
+            {
+                name[z]="Jane Eyre";
+                price[z]=350.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.350.0  ");
+                cost=350;
+            }
+            else if(num==5)
+            {
+                name[z]="The Outsider";
+                price[z]=140.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.140.0  ");
+                cost=140;
+            }
+            else if(num==6)
+            {
+                name[z]="The Lord Of The Rings";
+                price[z]=249.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.249.0  ");
+                cost=249;
+            }
+            else if(num==7)
+            {
+                name[z]="The Cather In The Rye";
+                price[z]=400.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.400.0  ");
+                cost=400;
+            }
+            else if(num==8)
+            {
+                name[z]="War And Peace";
+                price[z]=280.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.280.0  ");
+                cost=280;
+            }
+            else if(num==9)
+            {
+                name[z]="Lord Of The Flies";
+                price[z]=500.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.500.0  ");
+                cost=500;
+            }
+            else if(num==10)
+            {
+                name[z]="Great Expectations";
+                price[z]=249.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.249.0  ");
+                cost=249;
+            }
+            else if(num==11)
+            {
+                name[z]="Chronicles Of Narnia";
+                price[z]=300.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.300.0  ");
+                cost=300;
+            }
+            else if(num==12)
+            {
+                name[z]="The Retribution";
+                price[z]=450.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.450.0  ");
+                cost=450;
+            }
+            break;
+            case 2:
+            System.out.println("This is non-fiction books section");
+            System.out.println("and we are very glad to announce that we provide 25% discount in the story books section"); 
+            System.out.println("The latest collections of books have just come in");
+            System.out.println("Fiction books section provides you with its own varieties");
+            System.out.println("                                                         ");
+            System.out.println("The Books Available Here Are:");
+            System.out.println("***********************************************************");
+            System.out.println("                            ☺ NON FICTION BOOKS ☺                             ");
+            System.out.println("***********************************************************");
+
+            System.out.println(" SERIAL NO.          BOOK NAME                             AUTHOR            ");
+            System.out.println("    1.         A Suitable Job For A Woman             Val McDermid      ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    2.         Silent Spring                          Rackel Carson        ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    3.         In Cold Blood                          Truman Capote             ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    4.         A Room Of One's Own                    Virgina Woolf       "); 
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    5.         The Double Helix                       James Watson           ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    6.         Black Boy                              Richard Wright          ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    7.         The Prince                             Nicolo Machiavelli           ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    8.         The Origin Of Totalitarianism          Hannah Arendt           ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    9.         My Year Off                            Robert McCrum       ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    10.        1776                                   David McCullough        ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    11.        The Civil War                          Shelby Fronte              ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    12.        When Breath Becomes Air                Paul Kalanithi          ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("***********************************************************");
+
+            System.out.println("Enter serial number of the book you want to buy");
+            num=sc.nextInt();
+            if(num==1)
+            {
+                name[z]="A Suitable Job For A Woman";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            else if(num==2)
+            {
+                name[z]="Silent Spring";
+                price[z]=300.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.300.0  ");
+                cost=300;
+            }
+            else if(num==3)
+            {
+                name[z]="In Cold Blood";
+                price[z]=280.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.280.0  ");
+                cost=280;
+            }
+            else if(num==4)
+            {
+                name[z]="A Room Of One's Own";
+                price[z]=420;
+                z++;
+                System.out.println("The cost of your choice is Rs.420.0  ");
+                cost=420;
+            }
+            else if(num==5)
+            {
+                name[z]="The Double Helix";
+                price[z]=300.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.300.0  ");
+                cost=300;
+            }
+            else if(num==6)
+            {
+                name[z]="Black Boy";
+                price[z]=300.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.300.0  ");
+                cost=300;
+            }
+            else if(num==7)
+            {
+                name[z]="The Prince";
+                price[z]=100.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.100.0  ");
+                cost=100;
+            }
+            else if(num==8)
+            {
+                name[z]="The Origin Of Totalitarianism";
+                price[z]=180.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.180.0  ");
+                cost=180;
+            }
+            else if(num==9)
+            {
+                name[z]="My Year Off";
+                price[z]=450.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.450.0  ");
+                cost=450;
+            }
+            else if(num==10)
+            {
+                name[z]="1776";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            else if(num==11)
+            {
+                name[z]="The Civil War";
+                price[z]=800.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.800.0  ");
+                cost=800;
+            }
+            else if(num==12)
+            {
+                name[z]="When Breath Becomes Air";
+                price[z]=320.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.320.0  ");
+                cost=320;
+            }
+            break;
+            case 3:
+            System.out.println("This is adventure books section");
+            System.out.println("and we are very glad to announce that we provide 25% discount in the story books section"); 
+            System.out.println("The latest collections of books have just come in");
+            System.out.println("Fiction books section provides you with its own varieties");
+            System.out.println("                                                         ");
+            System.out.println("The Books Available Here Are:");
+            System.out.println("***********************************************************");
+            System.out.println("                               ☺ ADVENTURE ☺                             ");
+            System.out.println("***********************************************************");
+            System.out.println(" SERIAL NO.          BOOK NAME                             AUTHOR            ");
+            System.out.println("    1.         Into The Air                           Jon Krakauer      ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    2.         Treasure Island                        Robert Louis Stevenson   ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    3.         Moby Dick                              Herman Madville         ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    4.         The Call Of The Wild                   Jack London       "); 
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    5.         Into The Wild                          Jon Krakauer           ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    6.         The Right Stuff                        Tom Wolfe          ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    7.         In The Heart Of The Sea                Nathaniel Philbrick        ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    8.         Around The World In Eighty Days        Jules Verne            ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    9.         Hatchet                                Gary Paulsen      ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    10.        The Lost City Of Z                     David Gram        ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    11.        The Three Musketeers                   Alexandre Dumas      ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    12.        Gullivers Travels                      Jonnathan Swift   ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("***********************************************************");
+            System.out.println("Enter serial number of the book you want to buy");
+            num=sc.nextInt();
+            if(num==1)
+            {
+                name[z]="Into The Air";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            else if(num==2)
+            {
+                name[z]="Treasure Island";
+                price[z]=300.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.300.0  ");
+                cost=300;
+            }
+            else if(num==3)
+            {
+                name[z]="Moby Dick";
+                price[z]=280.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.280.0  ");
+                cost=280;
+            }
+            else if(num==4)
+            {
+                name[z]="The Call Of The Wild";
+                price[z]=420;
+                z++;
+                System.out.println("The cost of your choice is Rs.420.0  ");
+                cost=420;
+            }
+            else if(num==5)
+            {
+                name[z]="Into The Wild";
+                price[z]=300.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.300.0  ");
+                cost=300;
+            }
+            else if(num==6)
+            {
+                name[z]="The Right Stuff";
+                price[z]=350.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.350.0  ");
+                cost=350;
+            }
+            else if(num==7)
+            {
+                name[z]="In The Heart Of The Sea";
+                price[z]=100.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.100.0  ");
+                cost=100;
+            }
+            else if(num==8)
+            {
+                name[z]="Around The World In Eighty Days";
+                price[z]=180.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.180.0  ");
+                cost=180;
+            }
+            else if(num==9)
+            {
+                name[z]="Hatchet";
+                price[z]=450.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.450.0  ");
+                cost=450;
+            }
+            else if(num==10)
+            {
+                name[z]="The Lost City Of Z";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            else if(num==11)
+            {
+                name[z]="The Three Musketeers";
+                price[z]=800.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.800.0  ");
+                cost=800;
+            }
+            else if(num==12)
+            {
+                name[z]="Gullivers Travels";
+                price[z]=320.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.320.0  ");
+                cost=320;
+            }
+            break;
+            case 4:
+            System.out.println("This is satire books section");
+            System.out.println("and we are very glad to announce that we provide 25% discount in the story books section"); 
+            System.out.println("The latest collections of books have just come in");
+            System.out.println("Satire books section provides you with its own varieties");
+            System.out.println("                                                         ");
+            System.out.println("The Books Available Here Are:");
+            System.out.println("***********************************************************");
+
+            System.out.println("                                 ☺SATIRE BOOKS☺                             ");
+            System.out.println("***********************************************************");
+            System.out.println(" SERIAL NO.          BOOK NAME                             AUTHOR            ");
+            System.out.println("    1.         Animal Farm                            George Orwell      ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    2.         Gullivers Travels                      Jonnathan Swift        ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    3.         Catch 22                               Joseph Heller             ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    4.         Slaughter House Five                   Kurt Vonnegut       ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    5.         Cats Cradle                            Kurt Vonnegut           ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    6.         Candide                                Voltaire          ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    7.         A Modest Proposal                      Jonnathan Swift           ");
+              for (double i =0;i<=1000000000;i++);
+            System.out.println("    8.         Pride And Prejudice                    Jane Austen           ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    9.         Going Postal                           Terry Pratchett       ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    10.        Jennifer Government                    Max Barry        ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    11.        Adventure Of Huckleberry Fin           Mark Twain              ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    12.        Infinite Jest                          David Foster              ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("***********************************************************");
+
+            System.out.println("Enter serial number of the book you want to buy");
+            num=sc.nextInt();
+            if(num==1)
+            {
+                name[z]="Animal Farm";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            else if(num==2)
+            {
+                name[z]="Gullivers Travels";
+                price[z]=300.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.300.0  ");
+                cost=300;
+            }
+            else if(num==3)
+            {
+                name[z]="Catch 22";
+                price[z]=280.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.280.0  ");
+                cost=280;
+            }
+            else if(num==4)
+            {
+                name[z]="Slaughter House Five";
+                price[z]=420;
+                z++;
+                System.out.println("The cost of your choice is Rs.420.0  ");
+                cost=420;
+            }
+            else if(num==5)
+            {
+                name[z]="Cats Cradle";
+                price[z]=300.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.300.0  ");
+                cost=300;
+            }
+            else if(num==6)
+            {
+                name[z]="Candide";
+                price[z]=290.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.290.0  ");
+                cost=290;
+            }
+            else if(num==7)
+            {
+                name[z]="A Modest Proposal";
+                price[z]=100.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.100.0  ");
+                cost=100;
+            }
+            else if(num==8)
+            {
+                name[z]="Pride And Prejudice";
+                price[z]=180.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.180.0  ");
+                cost=180;
+            }
+            else if(num==9)
+            {
+                name[z]="Going Postal";
+                price[z]=450.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.450.0  ");
+                cost=450;
+            }
+            else if(num==10)
+            {
+                name[z]="Jennifer Government";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            else if(num==11)
+            {
+                name[z]="Adventure Of Huckleberry Fin";
+                price[z]=800.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.800.0  ");
+                cost=800;
+            }
+            else if(num==12)
+            {
+                name[z]="Infinite Jest";
+                price[z]=320.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.320.0  ");
+                cost=320;
+            }
+            break;
+            case 5:
+            System.out.println("This is horror books section");
+            System.out.println("and we are very glad to announce that we provide 25% discount in the story books section"); 
+            System.out.println("The latest collections of books have just come in");
+            System.out.println("Fiction books section provides you with its own varieties");
+            System.out.println("                                                         ");
+            System.out.println("The Books Available Here Are:");
+            System.out.println("***********************************************************");
+
+            System.out.println("                                 ☺HORROR BOOKS☺                             ");
+            System.out.println("***********************************************************");
+            System.out.println(" SERIAL NO.          BOOK NAME                             AUTHOR            ");
+            System.out.println("    1.         Frankenstein                           Mary Shelly      ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    2.         Dracula                                Bram Stoker        ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    3.         The Haunting Of Hill House             Sherley Jackson             ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    4.         The Shining                            Stephen King       "); 
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    5.         It                                     Stephen King           ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    6.         The Stand                              Stephen King          ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    7.         Carrie                                 Stephen King           ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    8.         Misery                                 Stephen King            ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    9.         Ghost Story                            Peter Straub       ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    10.        The Exorcist                           William Peter Blatty        ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    11.        The Woman In Black                     Susan Hill              ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    12.        Heart Shaped Box                       Joe Hill              ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("***********************************************************");
+            System.out.println("Enter serial number of the book you want to buy");
+            num=sc.nextInt();
+            if(num==1)
+            {
+                name[z]="Frankenstein";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            else if(num==2)
+            {
+                name[z]="Dracula";
+                price[z]=300.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.300.0  ");
+                cost=300;
+            }
+            else if(num==3)
+            {
+                name[z]="The Haunting Of Hill House";
+                price[z]=280.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.280.0  ");
+                cost=280;
+            }
+            else if(num==4)
+            {
+                name[z]="The Shining";
+                price[z]=420;
+                z++;
+                System.out.println("The cost of your choice is Rs.420.0  ");
+                cost=420;
+            }
+            else if(num==5)
+            {
+                name[z]="It";
+                price[z]=300.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.300.0  ");
+                cost=300;
+            }
+            else if(num==6)
+            {
+                name[z]="The Stand";
+                price[z]=290.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.290.0  ");
+                cost=290;
+            }
+            else if(num==7)
+            {
+                name[z]="Carrie";
+                price[z]=100.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.100.0  ");
+                cost=100;
+            }
+            else if(num==8)
+            {
+                name[z]="Misery";
+                price[z]=180.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.180.0  ");
+                cost=180;
+            }
+            else if(num==9)
+            {
+                name[z]="Ghost Story";
+                price[z]=450.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.450.0  ");
+                cost=450;
+            }
+            else if(num==10)
+            {
+                name[z]="Jennifer Government";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            else if(num==11)
+            {
+                name[z]="The Exorcist";
+                price[z]=800.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.800.0  ");
+                cost=800;
+            }
+            else if(num==12)
+            {
+                name[z]="Heart Shaped Box";
+                price[z]=320.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.320.0  ");
+                cost=320;
+            }
+            break;
+            case 6:
+            System.out.println("This is mystery filled books section");
+            System.out.println("and we are very glad to announce that we provide 25% discount in the story books section"); 
+            System.out.println("The latest collections of books have just come in");
+            System.out.println("Fiction books section provides you with its own varieties");
+            System.out.println("                                                         ");
+            System.out.println("The Books Available Here Are:");
+            System.out.println("***********************************************************");
+            System.out.println("                                 ☺MYSTERY BOOKS☺                             ");
+            System.out.println("***********************************************************");
+            System.out.println(" SERIAL NO.          BOOK NAME                             AUTHOR            ");
+            System.out.println("    1.         Girl Jacked                            Christopher Greyson      ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    2.         And Then She Was Gone                  Christopher Greyson        ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    3.         The Girl Who Lived                     Christopher Greyson             ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    4.         Jack Of Hearts                         Christopher Greyson       "); 
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    5.         Jack Knifed                            Christopher Greyson           ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    6.         Jacks Are Wild                         Christopher Greyson         ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    7.         Jack And The Giant Killer              Christopher Greyson           ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    8.         Data Jack                              Christopher Greyson            ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    9.         The Victims Club                       Jeffrey Daever                            ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    10.        Close Your Eyes                        Darren O' Sullivan                         ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    11.        The Rooster Bar                        John Grisham         ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("    12.        A Merciful Death                       Mercy Kilpatrick             ");
+             for (double i =0;i<=1000000000;i++);
+            System.out.println("***********************************************************");
+
+            System.out.println("Enter serial number of the book you want to buy");
+            num=sc.nextInt();
+            if(num==1)
+            {
+                name[z]="Girl Jacked";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            else if(num==2)
+            {
+                name[z]="And Then She Was Gone";
+                price[z]=300.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.300.0  ");
+                cost=300;
+            }
+            else if(num==3)
+            {
+                name[z]="The Girl Who Lived";
+                price[z]=280.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.280.0  ");
+                cost=280;
+            }
+            else if(num==4)
+            {
+                name[z]="Jack Of Hearts";
+                price[z]=420;
+                z++;
+                System.out.println("The cost of your choice is Rs.420.0  ");
+                cost=420;
+            }
+            else if(num==5)
+            {
+                name[z]="Jack Knifed";
+                price[z]=300.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.300.0  ");
+                cost=300;
+            }
+            else if(num==6)
+            {
+                name[z]="Jacks Are Wild";
+                price[z]=290.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.290.0  ");
+                cost=290;
+            }
+            else if(num==7)
+            {
+                name[z]="Jack And The Giant Killer";
+                price[z]=100.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.100.0  ");
+                cost=100;
+            }
+            else if(num==8)
+            {
+                name[z]="Data Jack";
+                price[z]=180.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.180.0  ");
+                cost=180;
+            }
+            else if(num==9)
+            {
+                name[z]="The Victims Club";
+                price[z]=450.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.450.0  ");
+                cost=450;
+            }
+            else if(num==10)
+            {
+                name[z]="Close Your Eyes";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            else if(num==11)
+            {
+                name[z]="The Rooster Bar";
+                price[z]=800.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.800.0  ");
+                cost=800;
+            }
+            else if(num==12)
+            {
+                name[z]="A Merciful Death";
+                price[z]=320.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.320.0  ");
+                cost=320;
+            }
+            break;
+        
+            case 7:
+            System.out.println("This is fantasy books section");
+            System.out.println("and we are very glad to announce that we provide 25% discount in the story books section"); 
+            System.out.println("The latest collections of books have just come in");
+            System.out.println("Fiction books section provides you with its own varieties");
+            System.out.println("                                                         ");
+            System.out.println("The Books Available Here Are:");
+            System.out.println("***********************************************************");
+            System.out.println("                                 ☺FANTASY BOOKS☺                             ");
+            System.out.println("***********************************************************");
+
+            System.out.println(" SERIAL NO.          BOOK NAME                             AUTHOR            ");
+            System.out.println("    1.         Shade Of The Vampire                   Bella Forest      ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    2.         Station Eleven                         Emily St.John Mendel        ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    3.         Christian Fantasy                      Ivan King      ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    4.         The School For Good And Evil           Soman Chainani       "); 
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    5.         Legend Of The Fire Walker              Steve Beevil           ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    6.         Drawing Bloodlines                     Steve Beevil          ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    7.         Suffrajitsu                            Jony Wolf           ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    8.         Leaving Traces                         Jennifer Mereland            ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    9.         Illegal Allien                         Mathew W. Quinn       ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    10.        Ressurection                           Arwen Elys Dayton              ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("***********************************************************");
+
+            System.out.println("Enter serial number of the book you want to buy");
+            num=sc.nextInt();
+            if(num==1)
+            {
+                name[z]="Shade Of The Vampire";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            else if(num==2)
+            {
+                name[z]="Station Eleven";
+                price[z]=300.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.300.0  ");
+                cost=300;
+            }
+            else if(num==3)
+            {
+                name[z]="Christian Fantasy";
+                price[z]=280.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.280.0  ");
+                cost=280;
+            }
+            else if(num==4)
+            {
+                name[z]="The School For Good And Evil";
+                price[z]=420;
+                z++;
+                System.out.println("The cost of your choice is Rs.420.0  ");
+                cost=420;
+            }
+            else if(num==5)
+            {
+                name[z]="Legend Of The Fire Walker";
+                price[z]=300.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.300.0  ");
+                cost=300;
+            }
+            else if(num==6)
+            {
+                name[z]="Drawing Bloodlines";
+                price[z]=290.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.290.0  ");
+                cost=290;
+            }
+            else if(num==7)
+            {
+                name[z]="Suffrajitsu";
+                price[z]=100.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.100.0  ");
+                cost=100;
+            }
+            else if(num==8)
+            {
+                name[z]="Leaving Traces";
+                price[z]=180.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.180.0  ");
+                cost=180;
+            }
+            else if(num==9)
+            {
+                name[z]="Illegal Allien";
+                price[z]=450.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.450.0  ");
+                cost=450;
+            }
+            else if(num==10)
+            {
+                name[z]="Ressurection";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            } 
+            break;
+        }
+    }
+
+    public void Transgressive_Fiction()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Welcome to Transgressive_Fiction section");
+        System.out.println("Shop for books with amazing discounts during the Great Indian Sale");
+        System.out.println("The latest collections of books have just come in");
+        System.out.println("Fiction books section provides you with its own varieties");
+        System.out.println("The Books Available Here Are:");
+        System.out.println("                                                         ");
+        System.out.println("***********************************************************");
+        System.out.println("        ☺ TRRANSGRESSIVE FICTION BOOKS ☺                       ");
+        System.out.println("***********************************************************");
+        System.out.println(" SERIAL NO.          BOOK NAME                             AUTHOR            ");
+        System.out.println("    1.         American Psycho                        Bret Easton Ellis      ");
+        for (double i =0;i<=1000000000;i++);
+        System.out.println("    2.         Invisible Monsters                     Chuck Palahnuik       ");
+        for (double i =0;i<=1000000000;i++);
+        System.out.println("    3.         Last Exit To Brooklyn                  Hubert Selky Jr.       ");
+        for (double i =0;i<=1000000000;i++);
+        System.out.println("    4.         Crash                                  I. G. Ballard          "); 
+        for (double i =0;i<=1000000000;i++);
+        System.out.println("    5.         Burnt Tongues                          Richard Thomas         ");
+        for (double i =0;i<=1000000000;i++);
+        System.out.println("***********************************************************");
+        System.out.println("Enter serial number of the book you want to buy");
+        int num=sc.nextInt();
+        if(num==1)
+        {
+            name[z]="American Psycho";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==2)
+        {
+            name[z]="Invisible Monsters";
+            price[z]=300.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.300.0  ");
+            cost=300;
+        }
+        else if(num==3)
+        {
+            name[z]="Last Exit To Brooklyn";
+            price[z]=280.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.280.0  ");
+            cost=280;
+        }
+        else if(num==4)
+        {
+            name[z]="Crash";
+            price[z]=420;
+            z++;
+            System.out.println("The cost of your choice is Rs.420.0  ");
+            cost=420;
+        }
+        else if(num==5)
+        {
+            name[z]="Burnt Tongues";
+            price[z]=300.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.300.0  ");
+            cost=300;
+        }
+         System.out.println("Enter the number of books you would like to buy");
+        num=sc.nextInt();
+            
+    }
+
+    public void Biogaphies_and_Autobiographies()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Welcome to the section of biogaphies and autobiographies");
+        System.out.println("Shop for books with amazing discounts during the Great Indian Sale");
+        System.out.println("The Books Available Here Are:");
+        System.out.println("1.Biogaphies");
+        System.out.println("2.Autobiographies");
+        System.out.println("Enter your choice");
+        int chwo=sc.nextInt();
+        switch(chwo)
+        {
+            case 1:
+            System.out.println("This is biogaphies section");
+            System.out.println("The latest collections of books have just come in");
+            System.out.println("                                                         ");
+            System.out.println("The Books Available Here Are:");
+            System.out.println("***********************************************************");
+            System.out.println("                               ☺ BIOGRAPHIES ☺                             ");
+            System.out.println("***********************************************************");
+
+            System.out.println(" SERIAL NO.          BOOK NAME                             AUTHOR            ");
+            System.out.println("    1.         Stray:Memoir Of A Runaway              Tanya Marquardt      ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    2.         The Last Madam                         Chris Waltz        ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    3.         The Truth Island                       Diana Marcum             ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    4.         Three James Harriot Classics           James Harriot       "); 
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    5.         The Simple Faith Of Mista Rogers       Amy Hollingsworth           ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    6.         Fear:Triumph In The White House        Bob Woodword          ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    7.         The Woman In The Strong Box            Maureen O'Hagan           ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    8.         Educated:A Memoir                      Tara Westover            ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    9.         A River In The Darkness                Maraji Ishikava       ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    10.        Born A Crime                           Trevor Noah     ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    11.        Extreme Ownership                      Jacko Willink              ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    12.        Born Survivors                         Wendy Holden              ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    13.        Time Out                               Claudia Rowa              ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    14.        Steve Jobs                             Walter Isaacson              ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    15.        Rampage                                Harold Schechter              ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("***********************************************************");
+            System.out.println("Enter serial number of the book you want to buy");
+            int num=sc.nextInt();
+            if(num==1)
+            {
+                name[z]="Stray:Memoir Of A Runaway";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            else if(num==2)
+            {
+                name[z]="The Last Madam";
+                price[z]=300.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.300.0  ");
+                cost=300;
+            }
+            else if(num==3)
+            {
+                name[z]="The Truth Island";
+                price[z]=280.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.280.0  ");
+                cost=280;
+            }
+            else if(num==4)
+            {
+                name[z]="Three James Harriot Classics";
+                price[z]=420;
+                z++;
+                System.out.println("The cost of your choice is Rs.420.0  ");
+                cost=420;
+            }
+            else if(num==5)
+            {
+                name[z]="The Simple Faith Of Mista Rogers";
+                price[z]=300.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.300.0  ");
+                cost=300;
+            }
+            else if(num==6)
+            {
+                name[z]="Fear:Triumph In The White House";
+                price[z]=290.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.290.0  ");
+                cost=290;
+            }
+            else if(num==7)
+            {
+                name[z]="The Woman In The Strong Box";
+                price[z]=100.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.100.0  ");
+                cost=100;
+            }
+            else if(num==8)
+            {
+                name[z]="Educated:A Memoir";
+                price[z]=180.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.180.0  ");
+                cost=180;
+            }
+            else if(num==9)
+            {
+                name[z]="A River In The Darkness";
+                price[z]=450.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.450.0  ");
+                cost=450;
+            }
+            else if(num==10)
+            {
+                name[z]="Born A Crime";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            else if(num==11)
+            {
+                name[z]="Extreme Ownership";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            else if(num==12)
+            {
+                name[z]="Born Survivors";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            else if(num==13)
+            {
+                name[z]="Time Out";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            else if(num==14)
+            {
+                name[z]="Steve Jobs";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            else if(num==15)
+            {
+                name[z]="Rampage";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            break;
+            case 2:
+            System.out.println("This is autobiographies section");
+            System.out.println("The latest collections of books have just come in");
+            System.out.println("                                                         ");
+            System.out.println("The Books Available Here Are:");
+            System.out.println("***********************************************************");
+            System.out.println("                              ☺ AUTOBIOGRAPHIES ☺                             ");
+            System.out.println("***********************************************************");            System.out.println(" SERIAL NO.          BOOK NAME                             AUTHOR            ");
+            System.out.println("    1.         Autobiography Of Benjamin Franklin     Benjamin Franklin      ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    2.         Agni Ki Udaan                          APJ Abdul Kalam        ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    3.         Personal Memoirs Of Ulysses S.Grant    Ulysses S.Grant       ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    4.         The Story Of My Experiments With Truth Mahatma Gandhi       "); 
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    5.         The Diary Of A Young Girl              Anne Frank           ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    6.         I Am Malala                            Malala Yuzufzai        ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    7.         I Know Why The Caged Bird Sings        Maya Angelou         ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    8.         The Story Of My Life                   Helen Keler           ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    9.         Dreams From My Father                  Barack Obama       ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    10.        Playing It My Way                      Sachin Tendulkar     ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    11.        Mein Kamph                             Adolf Hitler        ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    12.        On Writing                             Stephen King            ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    13.        The Autobiography Of Joey Barton       Joey Barton            ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    14.        Agatha Christie                        Agatha Christie       ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("    15.        Autobiography Of Malcolm X             Malcolm X              ");
+            for (double i =0;i<=1000000000;i++);
+            System.out.println("***********************************************************");            System.out.println("Enter serial number of the book you want to buy");
+            num=sc.nextInt();
+            if(num==1)
+            {
+                name[z]="Autobiography Of Benjamin Franklin";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            else if(num==2)
+            {
+                name[z]="Agni Ki Udaan";
+                price[z]=300.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.300.0  ");
+                cost=300;
+            }
+            else if(num==3)
+            {
+                name[z]="Personal Memoirs Of Ulysses S.Grant";
+                price[z]=280.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.280.0  ");
+                cost=280;
+            }
+            else if(num==4)
+            {
+                name[z]="The Story Of My Experiments With Truth";
+                price[z]=420;
+                z++;
+                System.out.println("The cost of your choice is Rs.420.0  ");
+                cost=420;
+            }
+            else if(num==5)
+            {
+                name[z]="The Diary Of A Young Girl";
+                price[z]=300.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.300.0  ");
+                cost=300;
+            }
+            else if(num==6)
+            {
+                name[z]="I Am Malala";
+                price[z]=290.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.290.0  ");
+                cost=290;
+            }
+            else if(num==7)
+            {
+                name[z]="I Know Why The Caged Bird Sings";
+                price[z]=100.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.100.0  ");
+                cost=100;
+            }
+            else if(num==8)
+            {
+                name[z]="The Story Of My Life";
+                price[z]=180.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.180.0  ");
+                cost=180;
+            }
+            else if(num==9)
+            {
+                name[z]="Dreams From My Father";
+                price[z]=450.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.450.0  ");
+                cost=450;
+            }
+            else if(num==10)
+            {
+                name[z]="Playing It My Way";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            else if(num==11)
+            {
+                name[z]="Mein Kamph";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            else if(num==12)
+            {
+                name[z]="On Writing";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            else if(num==13)
+            {
+                name[z]="The Autobiography Of Joey Barton";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            else if(num==14)
+            {
+                name[z]="Agatha Christie";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+            else if(num==15)
+            {
+                name[z]="Autobiography Of Malcolm X";
+                price[z]=430.0;
+                z++;
+                System.out.println("The cost of your choice is Rs.430.0  ");
+                cost=430;
+            }
+             System.out.println("Enter the number of books you would like to buy");
+        num=sc.nextInt();
+            
+        
+        }
+    }
+
+    public void Novels()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Welcome to the world of novels");
+        System.out.println("Shop for books with amazing discounts during the Great Indian Sale");
+        System.out.println("The Books Available Here Are:");
+        System.out.println("The latest collections of books have just come in");
+        System.out.println("                                                         ");
+        System.out.println("The Books Available Here Are:");
+        System.out.println("***********************************************************");        System.out.println("                               ☺ NOVELS ☺                             ");
+        System.out.println("***********************************************************");
+        System.out.println(" SERIAL NO.          BOOK NAME                             AUTHOR            ");
+        System.out.println("    1.         Nineteen eighty four(1984)             George Washington      ");
+        System.out.println("    2.         The Handmaid's Tale                    Margaret Atwood        ");
+        System.out.println("    3.         To Kill A Mocking Bird                 Harpee Lee             ");
+        System.out.println("    4.         Jane Eyre                              Charlotte Bronte       "); 
+        System.out.println("    5.         The Outsider                           Stephen King           ");
+        System.out.println("    6.         The Lord Of The Rings                  Jr R. Tolkein          ");
+        System.out.println("    7.         The Cather In The Rye                  J.D Salinger           ");
+        System.out.println("    8.         War And Peace                          Leo Tolstoy            ");
+        System.out.println("    9.         Lord Of The Flies                      William Goldling       ");
+        System.out.println("    10.        Great Expectations                     Charles Dickens        ");
+        System.out.println("    11.        Chronicles Of Narnia                   C.S Rewis              ");
+        System.out.println("    12.        The Retribution                        Val McDermid              ");
+        System.out.println("    13.        The Retribution                        Val McDermid              ");
+        System.out.println("    14.        The Retribution                        Val McDermid              ");
+        System.out.println("    15.        The Retribution                        Val McDermid              ");
+        System.out.println("***********************************************************");        System.out.println("Enter serial number of the book you want to buy");
+        int num=sc.nextInt();
+        if(num==1)
+        {
+            name[z]="Stray:Memoir Of A Runaway";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==2)
+        {
+            name[z]="The Last Madam";
+            price[z]=300.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.300.0  ");
+            cost=300;
+        }
+        else if(num==3)
+        {
+            name[z]="The Truth Island";
+            price[z]=280.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.280.0  ");
+            cost=280;
+        }
+        else if(num==4)
+        {
+            name[z]="Three James Harriot Classics";
+            price[z]=420;
+            z++;
+            System.out.println("The cost of your choice is Rs.420.0  ");
+            cost=420;
+        }
+        else if(num==5)
+        {
+            name[z]="The Simple Faith Of Mista Rogers";
+            price[z]=300.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.300.0  ");
+            cost=300;
+        }
+        else if(num==6)
+        {
+            name[z]="Fear:Triumph In The White House";
+            price[z]=290;
+            z++;
+            System.out.println("The cost of your choice is Rs.290.0  ");
+            cost=290;
+        }
+        else if(num==7)
+        {
+            name[z]="The Woman In The Strong Box";
+            price[z]=100.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.100.0  ");
+            cost=100;
+        }
+        else if(num==8)
+        {
+            name[z]="Educated:A Memoir";
+            price[z]=180.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.180.0  ");
+            cost=180;
+        }
+        else if(num==9)
+        {
+            name[z]="A River In The Darkness";
+            price[z]=450.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.450.0  ");
+            cost=450;
+        }
+        else if(num==10)
+        {
+            name[z]="Born A Crime";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==11)
+        {
+            name[z]="Extreme Ownership";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==12)
+        {
+            name[z]="Born Survivors";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==13)
+        {
+            name[z]="Time Out";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==14)
+        {
+            name[z]="Steve Jobs";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==15)
+        {
+            name[z]="Rampage";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+         System.out.println("Enter the number of books you would like to buy");
+        num=sc.nextInt();
+    }
+
+    public void Sci_Fi()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Welcome to the world of science fiction");
+        System.out.println("Shop for books with amazing discounts during the Great Indian Sale");
+        System.out.println("The Books Available Here Are:");
+        System.out.println("The latest collections of books have just come in");
+        System.out.println("                                                         ");
+        System.out.println("The Books Available Here Are:");
+        System.out.println("***********************************************************");        System.out.println("                             ☺ SCIENCE FICTION ☺                             ");
+        System.out.println("***********************************************************");
+        System.out.println(" SERIAL NO.          BOOK NAME                             AUTHOR            ");
+        System.out.println("    1.         Nineteen eighty four(1984)             George Washington      ");
+        System.out.println("    2.         The Handmaid's Tale                    Margaret Atwood        ");
+        System.out.println("    3.         To Kill A Mocking Bird                 Harpee Lee             ");
+        System.out.println("    4.         Jane Eyre                              Charlotte Bronte       "); 
+        System.out.println("    5.         The Outsider                           Stephen King           ");
+        System.out.println("    6.         The Lord Of The Rings                  Jr R. Tolkein          ");
+        System.out.println("    7.         The Cather In The Rye                  J.D Salinger           ");
+        System.out.println("    8.         War And Peace                          Leo Tolstoy            ");
+        System.out.println("    9.         Lord Of The Flies                      William Goldling       ");
+        System.out.println("    10.        Great Expectations                     Charles Dickens        ");
+        System.out.println("    11.        Chronicles Of Narnia                   C.S Rewis              ");
+        System.out.println("    12.        The Retribution                        Val McDermid              ");
+        System.out.println("    13.        The Retribution                        Val McDermid              ");
+        System.out.println("    14.        The Retribution                        Val McDermid              ");
+        System.out.println("    15.        The Retribution                        Val McDermid              ");
+        System.out.println("***********************************************************");        System.out.println("Enter serial number of the book you want to buy");
+        int num=sc.nextInt();
+        if(num==1)
+        {
+            name[z]="Stray:Memoir Of A Runaway";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==2)
+        {
+            name[z]="The Last Madam";
+            price[z]=300.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.300.0  ");
+            cost=300;
+        }
+        else if(num==3)
+        {
+            name[z]="The Truth Island";
+            price[z]=280.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.280.0  ");
+            cost=280;
+        }
+        else if(num==4)
+        {
+            name[z]="Three James Harriot Classics";
+            price[z]=420;
+            z++;
+            System.out.println("The cost of your choice is Rs.420.0  ");
+            cost=420;
+        }
+        else if(num==5)
+        {
+            name[z]="The Simple Faith Of Mista Rogers";
+            price[z]=300.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.300.0  ");
+            cost=300;
+        }
+        else if(num==6)
+        {
+            name[z]="Fear:Triumph In The White House";
+            price[z]=290.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.290.0  ");
+            cost=290;
+        }
+        else if(num==7)
+        {
+            name[z]="The Woman In The Strong Box";
+            price[z]=100.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.100.0  ");
+            cost=100;
+        }
+        else if(num==8)
+        {
+            name[z]="Educated:A Memoir";
+            price[z]=180.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.180.0  ");
+            cost=180;
+        }
+        else if(num==9)
+        {
+            name[z]="A River In The Darkness";
+            price[z]=450.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.450.0  ");
+            cost=450;
+        }
+        else if(num==10)
+        {
+            name[z]="Born A Crime";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==11)
+        {
+            name[z]="Extreme Ownership";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==12)
+        {
+            name[z]="Born Survivors";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==13)
+        {
+            name[z]="Time Out";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==14)
+        {
+            name[z]="Steve Jobs";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==15)
+        {
+            name[z]="Rampage";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        System.out.println("Enter the number of books you would like to buy");
+        num=sc.nextInt();
+    }
+
+    public void Encyclopedias()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Welcome to the world of encyclopedias");
+        System.out.println("Shop for books with amazing discounts during the Great Indian Sale");
+        System.out.println("The Books Available Here Are:");
+        System.out.println("The latest collections of books have just come in");
+        System.out.println("                                                         ");
+        System.out.println("The Books Available Here Are:");
+        System.out.println("***********************************************************");
+        System.out.println("                               ☺ NOVELS ☺                             ");
+        System.out.println("***********************************************************");
+        System.out.println(" SERIAL NO.          BOOK NAME                             AUTHOR            ");
+        System.out.println("    1.         Nineteen eighty four(1984)             George Washington      ");
+        System.out.println("    2.         The Handmaid's Tale                    Margaret Atwood        ");
+        System.out.println("    3.         To Kill A Mocking Bird                 Harpee Lee             ");
+        System.out.println("    4.         Jane Eyre                              Charlotte Bronte       "); 
+        System.out.println("    5.         The Outsider                           Stephen King           ");
+        System.out.println("    6.         The Lord Of The Rings                  Jr R. Tolkein          ");
+        System.out.println("    7.         The Cather In The Rye                  J.D Salinger           ");
+        System.out.println("    8.         War And Peace                          Leo Tolstoy            ");
+        System.out.println("    9.         Lord Of The Flies                      William Goldling       ");
+        System.out.println("    10.        Great Expectations                     Charles Dickens        ");
+        System.out.println("    11.        Chronicles Of Narnia                   C.S Rewis              ");
+        System.out.println("    12.        The Retribution                        Val McDermid              ");
+        System.out.println("    13.        The Retribution                        Val McDermid              ");
+        System.out.println("    14.        The Retribution                        Val McDermid              ");
+        System.out.println("    15.        The Retribution                        Val McDermid              ");
+        System.out.println("***********************************************************");        System.out.println("Enter serial number of the book you want to buy");
+        int num=sc.nextInt();
+        if(num==1)
+        {
+            name[z]="Stray:Memoir Of A Runaway";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==2)
+        {
+            name[z]="The Last Madam";
+            price[z]=300.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.300.0  ");
+            cost=300;
+        }
+        else if(num==3)
+        {
+            name[z]="The Truth Island";
+            price[z]=280.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.280.0  ");
+            cost=280;
+        }
+        else if(num==4)
+        {
+            name[z]="Three James Harriot Classics";
+            price[z]=420;
+            z++;
+            System.out.println("The cost of your choice is Rs.420.0  ");
+            cost=420;
+        }
+        else if(num==5)
+        {
+            name[z]="The Simple Faith Of Mista Rogers";
+            price[z]=300.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.300.0  ");
+            cost=300;
+        }
+        else if(num==6)
+        {
+            name[z]="Fear:Triumph In The White House";
+            price[z]=290.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.290.0  ");
+            cost=290;
+        }
+        else if(num==7)
+        {
+            name[z]="The Woman In The Strong Box";
+            price[z]=100.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.100.0  ");
+            cost=100;
+        }
+        else if(num==8)
+        {
+            name[z]="Educated:A Memoir";
+            price[z]=180.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.180.0  ");
+            cost=180;
+        }
+        else if(num==9)
+        {
+            name[z]="A River In The Darkness";
+            price[z]=450.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.450.0  ");
+            cost=450;
+        }
+        else if(num==10)
+        {
+            name[z]="Born A Crime";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==11)
+        {
+            name[z]="Extreme Ownership";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==12)
+        {
+            name[z]="Born Survivors";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==13)
+        {
+            name[z]="Time Out";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==14)
+        {
+            name[z]="Steve Jobs";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==15)
+        {
+            name[z]="Rampage";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        System.out.println("Enter the number of books you would like to buy");
+        num=sc.nextInt();
+    }
+
+    public void Dictionaries()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Welcome to the world of dictionaries");
+        System.out.println("Shop for books with amazing discounts during the Great Indian Sale");
+        System.out.println("The Books Available Here Are:");
+        System.out.println("The latest collections of books have just come in");
+        System.out.println("                                                         ");
+        System.out.println("The Books Available Here Are:");
+        System.out.println("***********************************************************");        System.out.println("                               ☺ NOVELS ☺                             ");
+        System.out.println("***********************************************************");        System.out.println(" SERIAL NO.          BOOK NAME                             AUTHOR            ");
+        System.out.println("    1.         Nineteen eighty four(1984)             George Washington      ");
+        System.out.println("    2.         The Handmaid's Tale                    Margaret Atwood        ");
+        System.out.println("    3.         To Kill A Mocking Bird                 Harpee Lee             ");
+        System.out.println("    4.         Jane Eyre                              Charlotte Bronte       "); 
+        System.out.println("    5.         The Outsider                           Stephen King           ");
+        System.out.println("    6.         The Lord Of The Rings                  Jr R. Tolkein          ");
+        System.out.println("    7.         The Cather In The Rye                  J.D Salinger           ");
+        System.out.println("    8.         War And Peace                          Leo Tolstoy            ");
+        System.out.println("    9.         Lord Of The Flies                      William Goldling       ");
+        System.out.println("    10.        Great Expectations                     Charles Dickens        ");
+        System.out.println("    11.        Chronicles Of Narnia                   C.S Rewis              ");
+        System.out.println("    12.        The Retribution                        Val McDermid              ");
+        System.out.println("    13.        The Retribution                        Val McDermid              ");
+        System.out.println("    14.        The Retribution                        Val McDermid              ");
+        System.out.println("    15.        The Retribution                        Val McDermid              ");
+        System.out.println("***********************************************************");        System.out.println("Enter serial number of the book you want to buy");
+        int num=sc.nextInt();
+        if(num==1)
+        {
+            name[z]="Stray:Memoir Of A Runaway";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==2)
+        {
+            name[z]="The Last Madam";
+            price[z]=300.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.300.0  ");
+            cost=300;
+        }
+        else if(num==3)
+        {
+            name[z]="The Truth Island";
+            price[z]=280.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.280.0  ");
+            cost=280;
+        }
+        else if(num==4)
+        {
+            name[z]="Three James Harriot Classics";
+            price[z]=420;
+            z++;
+            System.out.println("The cost of your choice is Rs.420.0  ");
+            cost=420;
+        }
+        else if(num==5)
+        {
+            name[z]="The Simple Faith Of Mista Rogers";
+            price[z]=300.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.300.0  ");
+            cost=300;
+        }
+        else if(num==6)
+        {
+            name[z]="Fear:Triumph In The White House";
+            price[z]=290.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.290.0  ");
+            cost=290;
+        }
+        else if(num==7)
+        {
+            name[z]="The Woman In The Strong Box";
+            price[z]=100.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.100.0  ");
+            cost=100;
+        }
+        else if(num==8)
+        {
+            name[z]="Educated:A Memoir";
+            price[z]=180.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.180.0  ");
+            cost=180;
+        }
+        else if(num==9)
+        {
+            name[z]="A River In The Darkness";
+            price[z]=450.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.450.0  ");
+            cost=450;
+        }
+        else if(num==10)
+        {
+            name[z]="Born A Crime";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==11)
+        {
+            name[z]="Extreme Ownership";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==12)
+        {
+            name[z]="Born Survivors";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==13)
+        {
+            name[z]="Time Out";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==14)
+        {
+            name[z]="Steve Jobs";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+        else if(num==15)
+        {
+            name[z]="Rampage";
+            price[z]=430.0;
+            z++;
+            System.out.println("The cost of your choice is Rs.430.0  ");
+            cost=430;
+        }
+       
+    }
+    
+}
+
+   
